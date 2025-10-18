@@ -1,0 +1,31 @@
+<div class="homepage-container">
+  <div class="api-test-box">
+    <button (click)="fetchProduct()" [disabled]="isLoading">
+      @if (isLoading) {
+      Chargement
+      } @else {
+      Tester l'api
+      }
+    </button>
+
+    @if (produit) {
+    <div class="product-info">
+      <h3>{{ produit.name }}</h3>
+      <p>Marque : {{ produit.brand }}</p>
+      <p>Nutriscore : {{ produit.nutriscore }}</p>
+      <p>Allergènes : {{ produit.allergens }}</p>
+      <p>Ingrédients : {{ produit.ingredients }}</p>
+      <p>Additifs : {{ produit.additives }}</p>
+      @if (produit.image) {
+      <img [src]="produit.image" alt="Image produit">
+      }
+    </div>
+    }
+
+    @if (error) {
+    <div class="product-info error">
+      {{ error }}
+    </div>
+    }
+  </div>
+</div>

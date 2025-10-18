@@ -1,0 +1,45 @@
+.homepage-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 110px);
+}
+
+.api-test-box {
+  text-align: center;
+}
+
+button {
+  background-color: var(--color3);
+  color: var(--color1);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:active {
+  transform: scale(1.05);
+}
+
+.product-info {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: var(--color2);
+  color: var(--color1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.product-info img {
+  margin-top: 10px;
+  max-width: 150px;
+  border-radius: 6px;
+}
+
+.error {
+  background-color: var(--color5);
+}

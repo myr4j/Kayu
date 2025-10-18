@@ -1,0 +1,25 @@
+.header {
+  height: 60px;
+  background-color: var(--color3);
+
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  /* background-color: var(--color4); */
+  height: 46px;
+  width: 46px;
+  border-radius: 5px;
+  margin: 7px;
+}
+
+#favicon {
+  width: 100%;
+  height: 100%;
+}
+
+#title {
+  font-family: 'Pacifico', cursive;
+  color: var(--color1);
+}

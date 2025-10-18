@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --color1: #dea450;
+  --color2: #9b461f;
+  --color3: #6a1d2f;
+  --color4: #354c3c;
+  --color5: #42354c;
+}
+
+html, body {
+  background-color: var(--color2);
+  flex-direction: column;
+  margin: 0;
+}
+
