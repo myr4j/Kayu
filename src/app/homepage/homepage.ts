@@ -14,18 +14,26 @@ export class Homepage {
   isLoading = false;
   error = '';
 
-  private nutellaCodeBarre = '4008400402222';
+  private codeBarresCOllections = [
+    '4008400402222', // nutella
+    '3302740059193', // poulet
+    '3248832940522', // couscous
+  ];
 
   constructor(private http: HttpClient) {}
 
-  async fetchProduct() {
+  async fetchRandomProduct() {
     this.isLoading = true;
     this.error = '';
     this.produit = null;
 
-    const url = `https://world.openfoodfacts.org/api/v0/product/${this.nutellaCodeBarre}.json`;
+    const randomBarCode = this.codeBarresCOllections[
+      Math.floor(Math.random() * this.codeBarresCOllections.length)
+    ];
 
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const url = `https://world.openfoodfacts.org/api/v0/product/${randomBarCode}.json`;
+
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
     this.http.get<any>(url).subscribe({
       next: (data) => {

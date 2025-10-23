@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 110px);
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .api-test-box {
